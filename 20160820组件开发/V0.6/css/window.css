@@ -1,0 +1,10 @@
+.window_boundingBox{
+    position:fixed; border:1px solid #ddd;  box-shadow:0px 0px 12px rgba(0,0,0,0.5);
+}
+.window_boundingBox ipupt{ border:1px solid #ddd; width:90px;
+    text-align: center;
+   }
+.window_header{ background:#000; color:#fff;
+    text-align:center; padding:5px; font-size:20px;}
+.window_content{ padding:10px;}
+.window_footer{ position:absolute; left:0px; bottom:0px; padding:10px;}
