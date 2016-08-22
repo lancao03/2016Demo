@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>fullpage测试</title>
+		<script type="text/javascript" src="../js/lib/jquery-1.8.3.min.js">
+		</script>
+		<script src="../js/lib/jquery.fullPage.min.js"></script>
+		<style>
+			.component {
+				width: 300px;
+				height: 300px;
+				background-color: #fff;
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="page_containter">
+			<div class="page page1 section" id="page1">
+				<div class="component logo">logo</div>
+				<div class="component slogan">slogan</div>
+			</div>
+			<div class="page page2 section" id="page2"></div>
+			<div class="page page3 section" id="page3"></div>
+			<div class="page page4 section" id="page4"></div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$(".page_containter").fullpage({
+					sectionsColor: ["#56cadd", "#79d0bc", "#f4a79e", "#6ad5c4"],
+					onLeave: function(index, nextIndex, direction) {
+						//debugger index从1开始 eq里的参数从0开始
+						console.log($(this).find(".page"));
+						$(".page_containter").find(".page").eq(index - 1).trigger("onLeave");
+					},
+					afterLoad: function(anchorLink, index) {
+						//debugger
+						$(".page_containter").find(".page").eq(index - 1).trigger("onLoad");
+					}
+				});
+
+				$(".page").on("onLeave", function() {
+					console.log($(this).attr("id"), "-->", "leave");
+					$(this).find(".component").triggerHandler("onLeave"); //
+				})
+				$(".page").on("onLoad", function() {
+					console.log($(this).attr("id"), "-->", "onload");
+					$(this).find(".component").trigger("onLoad");
+				})
+
+				$(".component").on("onLoad", function() {
+					$(this).fadeIn();
+					return false;
+				})
+				$(".component").on("onLeave", function() {
+					$(this).fadeOut();
+					//					return false; //DOM事件的循环传播，无限循环
+				})
+
+			});
+		</script>
+	</body>
+
+</html>

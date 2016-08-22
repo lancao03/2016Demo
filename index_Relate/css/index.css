@@ -1,0 +1,122 @@
+/*create 20160822 index专用 */
+
+body,
+html {
+	padding: 0px;
+	margin: 0px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #636879;
+	background: #eef3f4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+}
+
+ul,
+li {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+	color: #636879;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #777;
+}
+
+.guide-title {
+	color: #56cadd;
+	margin: 25px auto;
+	text-align: center;
+	font-size: 18px;
+}
+
+
+/*全局的东西*/
+
+.main-content {
+	width: 1200px;
+	margin: 0px auto;
+}
+
+
+/* 导航相关*/
+
+.dataview-treemenu-lv2-all:after,
+.dataview-treemenu-lv1-all:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+.panel-frame {
+	border: 1px solid #ececec;
+	background: #fff;
+}
+
+.panel-navs-head {
+	height: 45px;
+	line-height: 45px;
+	border-bottom: 1px solid #ECECEC;
+}
+
+.panel-navs-head .panel-title {
+	padding-left: 15px;
+	font-size: 16px;
+}
+
+.panel-navs-content {
+	padding: 10px;
+}
+
+
+/* 一行的wrap */
+
+.dataview-treemenu-lv1-all {
+	border-bottom: 1px dashed #ECECEC;
+	padding: 10px;
+}
+
+
+/*第一个*/
+
+.dataview-treemenu-lv1 {
+	float: left;
+}
+
+.dataview-treemenu-lv1 span {
+	display: inline-block;
+	padding-right: 10px;
+	color: #b1b1b3;
+	border-right: 1px solid #ebebeb;
+	height: 20px;
+	line-height: 20px;
+}
+
+
+/*后续的列表*/
+
+.dataview-treemenu-lv2-all {
+	margin-left: 124px;
+}
+
+.dataview-treemenu-lv2-all li {
+	float: left;
+	margin: 0px 12px 10px;
+}

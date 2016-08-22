@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>数字不断增加</title>
+	</head>
+
+	<body>
+		<div id="id">90</div>
+		<script>
+			var id = document.getElementById("id");
+			var num = id.innerHTML;
+			console.log(num);
+			var s=1;
+			var speed=10;
+			var timer=null;
+//			for(var i = 1; i < num; i++) {
+//				setTimeout(function() {
+//					speed=Math.floor((num-s)/10);
+//					s+=speed;
+//					id.innerHTML=s;
+//					console.log(s);
+//				},12*i);
+//			}
+			
+			timer=setInterval(function(){
+				if(s>=num){
+					clearInterval(timer);
+				}else{
+					speed=(num-s)/10;
+					speed=Math.ceil(speed);
+					s+=speed;
+					id.innerHTML=s;
+					console.log(s,speed);
+				}
+			},30)
+		</script>
+	</body>
+
+</html>

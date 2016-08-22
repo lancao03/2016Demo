@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/read.css" />
+		<title>小说阅读</title>
+	</head>
+
+	<body>
+		<div id="root" class="container">
+			<div class="m-artical-action">
+				<div class="artical-action-mid" id="action_mid"></div>
+			</div>
+			<div id="top-nav" class="top-nav" style="display:none">
+				<div class="icon-back"></div>
+				<div class="nav-title">返回书架</div>
+			</div>
+			<div id="fiction_chapter_title" class="fiction_chapter_title">
+			</div>
+			<div id="fiction_container" class="m-read-content">
+				
+			</div>
+			<div class="m-button-bar">
+				<ul class="u-tab">
+					<li id="prev_button">上一章</li>
+					<li id="next_button">下一章</li>
+				</ul>
+			</div>
+			<!--字体大小背景 Starts-->
+			<div class="nav-pannel-bk font_container" style="display: none"></div>
+			<div class="nav-pannel font_container" style="display: none;" id="font-container">
+				<div class="child-mod">
+					<span>字号</span>
+					<button id="large-font" class="font-size-button">大</button>
+					<button id="small-font" class="font-size-button">小</button>
+				</div>
+				<div class="child-mod">
+					<span>背景</span>
+					<div class="bk-container" data-color="#f7eee5" style="background-color:#f7eee5">
+						<div class="bk-container-current">
+						</div>
+						<span class="bk-name">米白</span>
+					</div>
+					<div class="bk-container" data-color="#e9dfc7" style="background-color:#e9dfc7">
+						<div class="bk-container-current">
+						</div>
+						<span class="bk-name">纸张</span>
+					</div>
+					<div class="bk-container" data-color="#a4a4a4" style="background-color:#a4a4a4">
+						<div class="bk-container-current">
+						</div>
+						<span class="bk-name">浅灰</span>
+					</div>
+					<div class="bk-container" data-color="#cdefce" style="background-color:#cdefce">
+						<div class="bk-container-current">
+						</div>
+						<span class="bk-name">护眼</span>
+					</div>
+					<div class="bk-container" data-color="rgba(0,0,0,0.7)" style="background-color:rgba(0,0,0,0.7)">
+						<div class="bk-container-current">
+						</div>
+						<span class="bk-name">夜间</span>
+					</div>
+				</div>
+			</div>
+			<!--字体大小背景 Ends-->
+			<!--底部工具栏 Starts -->
+			<div id="bottom-nav" class="bottom-nav bottom_nav" style="display: none">
+				<ul>
+					<li class="item-catalog">
+						<span class="icon-catalog"></span>
+						<span class="nav-txt">目录</span>
+					</li>
+					<li class="item-font" id="font-button">
+						<span class="icon-font"></span>
+						<span class="nav-txt">字体</span>
+					</li>
+					<li class="item-model">
+						<div class="item-model-day" style="display:none;" id="day-button">
+							<span class="icon-day"></span>
+							<span class="nav-txt">白天</span>
+						</div>
+						<div class="item-model-night" id="night-button">
+							<span class="icon-night"></span>
+							<span class="nav-txt">夜晚</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--底部工具栏 Ends-->
+		</div>
+		<script src="lib/zepto.min.js"></script>
+		<script>
+			window.jQuery = $;
+		</script>
+		<script src="js/jquery.base64.js"></script>
+		<script src="js/jquery.jsonp.js"></script>
+		<script>
+			(function() {
+				//html5本地存储
+				var Util = (function() {
+					var prefix = "html5_reader_";
+					//防止别人误操作localstorage
+					var StorageGetter = function(key) {
+						return localStorage.getItem(prefix + key);
+					}
+					var StorageSetter = function(key, val) {
+						return localStorage.setItem(prefix + key, val);
+					}
+					return {
+						StorageGetter: StorageGetter,
+						StorageSetter: StorageSetter
+					}
+				})(); //封装一个方法
+				//声明一些常量
+				var Dom = {
+					top_nav: $("#top-nav"),
+					bottom_nav: $(".bottom_nav"),
+					night_day_switch: $("#night-button"),
+					font_container: $(".font_container"),
+					font_button: $("#font-button")
+				}
+				var Win = $(window);
+				var Doc = $(document);
+				var RootContainer = $("#fiction_container");
+				//				var initFontSize = 14; //初始字号
+				var initFontSize = Util.StorageGetter("font-size");
+				initFontSize = parseInt(initFontSize);
+				if (!initFontSize) {
+					initFontSize = 14;
+				}
+				RootContainer.css("font-size", initFontSize);
+
+				//				var initBackgroundColor="#f7eee5";
+				var initBackgroundColor = Util.StorageGetter("background-color");
+				RootContainer.css("background-color", initBackgroundColor);
+				$(".bk-container[data-color='" + initBackgroundColor + "']").addClass("current");
+				//				console.log(initBackgroundColor,"值");
+				if (!initBackgroundColor) {
+					initBackgroundColor = "#f7eee5";
+				}
+
+				function main() {
+					//todo 整个项目的入口函数
+					EventHanlder();
+				}
+
+				function ReaderModel() {
+					//todo 实现和阅读器相关的数据交互的方法
+
+				}
+
+				function ReaderBaseFrame() {
+					//todo 渲染基本的UI结构
+				}
+				//控制层
+				function EventHanlder() {
+					//todo 交互的事件绑定
+					//touch zepto tap  4.0 300ms
+					$("#action_mid").click(function() {
+						if (Dom.top_nav.css("display") == "none") {
+							Dom.bottom_nav.show();
+							Dom.top_nav.show();
+						} else {
+							Dom.bottom_nav.hide();
+							Dom.top_nav.hide();
+							Dom.font_container.hide();
+							Dom.font_button.removeClass("current");
+						}
+					});
+					Dom.font_button.click(function() {
+						if (Dom.font_container.css("display") == "none") {
+							Dom.font_container.show();
+							Dom.font_button.addClass("current");
+						} else {
+							Dom.font_container.hide();
+							Dom.font_button.removeClass("current");
+						}
+					});
+
+					//字体变大
+					$("#large-font").click(function() {
+						initFontSize++;
+						if (initFontSize > 20) {
+							return;
+						}
+						RootContainer.css("font-size", initFontSize);
+						Util.StorageSetter("font-size", initFontSize);
+					});
+					//字体变小
+					$("#small-font").click(function() {
+						initFontSize--;
+						if (initFontSize < 12) {
+							return;
+						}
+						RootContainer.css("font-size", initFontSize);
+						Util.StorageSetter("font-size", initFontSize);
+					});
+					//背景色改变
+					$(".bk-container").each(function() {
+						$(this).click(function() {
+							var curColor = $(this).attr("data-color");
+							RootContainer.css("background-color", curColor);
+							$(".bk-container").removeClass("current");
+							$(this).addClass("current");
+							Util.StorageSetter("background-color", curColor);
+						});
+					});
+
+					Dom.night_day_switch.click(function() {
+						//todo 触发背景切换事件
+						var night_color = "rgba(0,0,0,0.3)";
+						RootContainer.css("background", night_color);
+						$(this).hide();
+						$("#day-button").show();
+
+					});
+
+					Win.scroll(function() {
+						Dom.bottom_nav.hide();
+						Dom.top_nav.hide();
+						Dom.font_container.hide();
+						Dom.font_button.removeClass("current");
+					});
+				}
+
+				main();
+
+			})();
+		</script>
+	</body>
+
+</html>
