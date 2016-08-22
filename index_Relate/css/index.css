@@ -104,16 +104,21 @@ a:visited {
 	display: inline-block;
 	padding-right: 10px;
 	color: #b1b1b3;
+	width: 128px;
 	border-right: 1px solid #ebebeb;
 	height: 20px;
 	line-height: 20px;
+	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 
 /*后续的列表*/
 
 .dataview-treemenu-lv2-all {
-	margin-left: 124px;
+	margin-left: 148px;
 }
 
 .dataview-treemenu-lv2-all li {
