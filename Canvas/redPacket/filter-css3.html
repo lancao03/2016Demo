@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>示例CSS3的filter属性</title>
+		<style>
+			div {
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			img {
+				border: 0px;
+			}
+			
+			.show_wrap {
+				width: 1000px;
+				border: 1px solid #ddd;
+			}
+			
+			.show_wrap .cell {
+				display: inline-block;
+				width: 400px;
+				margin: 0 25px;
+			}
+			
+			.show_wrap .cell img {
+				width: 100%;
+			}
+			
+			.cell_opts_bar h1,
+			.cell_opts_bar h3,
+			.cell_opts_bar h4 {
+				font-family: "微软雅黑";
+				text-align: center;
+			}
+			
+			.btns_bar {
+				text-align: center;
+				padding: 10px 0;
+			}
+			
+			.btns_bar a {
+				display: inline-block;
+				border: 1px solid #ddd;
+				padding: 5px;
+				height: 20px;
+				line-height: 20px;
+				color: #555;
+				text-decoration: none;
+				margin: 0 5px;
+			}
+			
+			.btns_bar a.current,
+			.btns_bar a:hover {
+				background: #99CCCC;
+				color: #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="show_wrap">
+			<div class="cell_row">
+				<div class="cell before">
+					<img src="img/美女.jpg" alt="" />
+				</div>
+				<div class="cell after">
+					<img src="img/美女.jpg" alt="" />
+				</div>
+			</div>
+			<div class="cell_opts_bar">
+				<h1>&nbsp;</h1>
+				<h3>&nbsp;</h3>
+				<h4>&nbsp;</h4>
+				<div class="btns_bar">
+
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js">
+		</script>
+		<script>
+			$(function() {
+				var filters = [];
+				filters = [{
+					"attr": "grayscale",
+					"name": "灰度"
+				}, {
+					"attr": "sepia",
+					"name": "褐度"
+				}, {
+					"attr": "saturate",
+					"name": "饱和度"
+				}, {
+					"attr": "hue-rotate",
+					"name": "色相旋转"
+				}, {
+					"attr": "invert",
+					"name": "反色"
+				}, {
+					"attr": "opacity",
+					"name": "透明度"
+				}, {
+					"attr": "brightness",
+					"name": "明度"
+				}, {
+					"attr": "contrast",
+					"name": "对比度"
+				}, {
+					"attr": "blur",
+					"name": "模糊"
+				}, {
+					"attr": "drop-shadow",
+					"name": "阴影"
+				}];
+				var f_length = filters.length;
+				var img = $(".cell_row .after img");
+
+				function init() {
+					//添加按钮组
+					addBtns();
+					var num = 2;
+					$(".cell_opts_bar .btns_bar a").on("click", function() {
+						var attr = $(this).html();
+						var name = $(this).attr("data-name");
+						var imgStyle = attr;
+						//console.log($(this).html(), imgStyle);
+						switch(attr) {
+							case "brightness":
+								imgStyle = attr + "(1)";
+								break;
+							case "sepia":
+								imgStyle = imgStyle + "(1)";
+								break;
+							case "saturate":
+								imgStyle = imgStyle + "(3)";
+								break;
+							case "hue-rotate":
+								imgStyle = imgStyle + "(90deg)";
+								break;
+							case "invert":
+								imgStyle = imgStyle + "(1)";
+								break;
+							case "opacity":
+								imgStyle = imgStyle + "(0.2)";
+								break;
+							case "brightness":
+								imgStyle = imgStyle + "(0.6)";
+								break;
+							case "contrast":
+								imgStyle = imgStyle + "(2)";
+								break;
+							case "blur":
+								imgStyle = imgStyle + "(3px)";
+								break;
+							case "drop-shadow":
+								imgStyle = imgStyle + "(5px 5px 5px #ccc)";
+								break;
+							default:
+								break;
+						}
+						img.css({
+							"-webkit-filter": imgStyle
+						});
+						$(this).addClass("current").siblings().removeClass("current");
+						$(".cell_opts_bar h1").html(attr);
+						$(".cell_opts_bar h3").html(name);
+						$(".cell_opts_bar h4").html(img.attr("style"));
+					});
+				}
+
+				//显示关键信息
+				function show_info() {
+
+				}
+				//添加按钮
+				function addBtns() {
+					for(var i = 0; i < f_length; i++) {
+						var btn = $("<a href='javascript:void(0)' > < /a>");
+						var attr = filters[i]["attr"];
+						btn.html(attr);
+						btn.attr("data-name", filters[i]["name"]);
+						$(".cell_opts_bar .btns_bar").append(btn);
+					}
+				}
+
+				//添加前缀
+				function add_pre(name) {
+					var pre_names;
+					pre_names = [
+						//						name,
+						"-webkit-" + name
+						//						"-o-" + name,
+						//						"-ms-" + name,
+						//						"-moz-" + name
+					];
+					return pre_names;
+				}
+				init();
+			});
+		</script>
+	</body>
+
+</html>
