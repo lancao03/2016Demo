@@ -1,0 +1,14 @@
+/*和博客相关*/
+body,html{margin:0px;padding:0px;}
+ul,li{margin:0px; padding:0px; list-style: none;}
+
+/*logo相关*/
+.blog-wrapper{margin:40px auto;}
+.main-content{ width: 1200px; margin:0px auto;}
+
+.logo-group-images{ background:url(../images/logo-group.png) no-repeat left top; width: 500px; height:92px;}
+.logo-item{ margin-bottom: 20px;}
+.logo-item ul li{ float: left; width:62px; height: 20px; line-height: 20px; font-size: 12px; text-align: center;}
+.logo-item ul:after{ display: table; content:""; clear: both;}
+.logo-item.item02 .logo-group-images{ background-position: left -92px;}
+.logo-item.item03 .logo-group-images{ background-position: left -184px;}
