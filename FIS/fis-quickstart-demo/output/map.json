@@ -1,0 +1,114 @@
+{
+    "res": {
+        "lib/base.css": {
+            "uri": "/lib/base_7c67d30.css",
+            "type": "css",
+            "deps": [
+                "lib/main.css"
+            ]
+        },
+        "lib/main.css": {
+            "uri": "/lib/main_73d6d8b.css",
+            "type": "css",
+            "deps": [
+                "lib/normalize.css"
+            ]
+        },
+        "lib/mod.js": {
+            "uri": "/lib/mod_df9079e.js",
+            "type": "js"
+        },
+        "lib/normalize.css": {
+            "uri": "/lib/normalize_7532bcc.css",
+            "type": "css"
+        },
+        "modules/backbone/backbone.js": {
+            "uri": "/modules/backbone/backbone_b77b5a1.js",
+            "type": "js",
+            "deps": [
+                "underscore"
+            ]
+        },
+        "modules/collections/todos.js": {
+            "uri": "/modules/collections/todos_f65ea91.js",
+            "type": "js",
+            "deps": [
+                "backbone",
+                "vendor/backbone.localStorage",
+                "jquery",
+                "underscore",
+                "models/todo"
+            ]
+        },
+        "modules/common/common.js": {
+            "uri": "/modules/common/common_8597428.js",
+            "type": "js"
+        },
+        "modules/jquery/jquery.js": {
+            "uri": "/modules/jquery/jquery_d27e9f3.js",
+            "type": "js"
+        },
+        "modules/main.js": {
+            "uri": "/modules/main_e1729b6.js",
+            "type": "js",
+            "deps": [
+                "backbone",
+                "jquery",
+                "views/app",
+                "routers/router"
+            ]
+        },
+        "modules/models/todo.js": {
+            "uri": "/modules/models/todo_fea5cd9.js",
+            "type": "js",
+            "deps": [
+                "backbone"
+            ]
+        },
+        "modules/routers/router.js": {
+            "uri": "/modules/routers/router_6c09366.js",
+            "type": "js",
+            "deps": [
+                "backbone",
+                "common",
+                "collections/todos"
+            ]
+        },
+        "modules/underscore/underscore.js": {
+            "uri": "/modules/underscore/underscore_53c80c2.js",
+            "type": "js"
+        },
+        "modules/vendor/backbone.localStorage.js": {
+            "uri": "/modules/vendor/backbone.localStorage_74194e2.js",
+            "type": "js",
+            "deps": [
+                "underscore",
+                "jquery",
+                "backbone"
+            ]
+        },
+        "modules/views/app.js": {
+            "uri": "/modules/views/app_53f4457.js",
+            "type": "js",
+            "deps": [
+                "jquery",
+                "underscore",
+                "backbone",
+                "common",
+                "views/todos",
+                "collections/todos"
+            ]
+        },
+        "modules/views/todos.js": {
+            "uri": "/modules/views/todos_36808a9.js",
+            "type": "js",
+            "deps": [
+                "backbone",
+                "common",
+                "jquery",
+                "underscore"
+            ]
+        }
+    },
+    "pkg": {}
+}
