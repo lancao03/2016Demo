@@ -5,9 +5,16 @@
 		<meta charset="utf-8" />
 		<title>课程章节</title>
 		<link rel="stylesheet" href="css/learn.css" />
+		
 	</head>
 
 	<body>
+		<dl class="desc_wrap">
+			<dt><span>dt表示章节的名字</span></dt>
+			<dt><span>dd的类名说明</span></dt>
+			<dd><span>item_lesson表示课程、item_task表示作业、item_exam表示考试</span></dd>
+			<dd><span>状态：active 当前选中的项目、last_dd 最后一个dd </span></dd>
+		</dl>
 		<!--课程目录 Starts-->
 		<div class="lui_chapter_catalog">
 			<dl>
@@ -16,7 +23,7 @@
 					<span class="chapter_title">第一章</span>
 				</dt>
 
-				<dd>
+				<dd class="item_lesson">
 					<i class="lui_dot"></i>
 					<span class="course_title">
 						<a id="showBlue" href="javascript:void(0);" onclick="goToLearn('com.landray.kmss.kms.learn.model.KmsLearnCourseware','156bfbf4cb05a0dce64988d4966b83d4');" >
@@ -24,12 +31,12 @@
 					</span>
 				</dd>
 
-				<dd class="active">
+				<dd class="active item_task">
 					<i class="lui_dot"></i>
 					<span class="course_title task_title"><a href="javascript:void(0);"  id="nextConBtn">作业1</a></span>
 				</dd>
 
-				<dd class="status_disable">
+				<dd class="status_disable item_exam">
 					<i class="lui_dot"></i>
 					<span class="course_title exame_title"><a href="javascript:void(0);">0道题固定试卷</a></span>
 				</dd>
@@ -39,12 +46,12 @@
 					<span class="chapter_title">第二章</span>
 				</dt>
 
-				<dd>
+				<dd class="item_lesson">
 					<i class="lui_dot"></i>
 					<span class="course_title"><a href="javascript:void(0);">两分钟学习课件2</a></span>
 				</dd>
 
-				<dd class="last_dd"><i class="lui_dot"></i>
+				<dd class="last_dd item_exam"><i class="lui_dot"></i>
 					<span class="course_title exame_title"><a href="javascript:void(0);">10道题固定试卷-复制</a></span>
 				</dd>
 			</dl>

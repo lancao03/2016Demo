@@ -37,24 +37,50 @@ body {
 /*布局相关*/
 
 .course_detail_containter {
-	position: relative;
 	height: 665px;
+	width: 100%;
+	display: table;
 }
 
 .course_detail_containter .course_detail_left {
-	background: #BEC5CB;
+	border: 1px solid #BEC5CB;
+	display: table-cell;
+	vertical-align: top;
 	height: 665px;
-	padding-right: 320px;
+	position: relative;
 }
 
 .course_detail_containter .course_detail_right {
+	display: table-cell;
 	padding: 10px;
 	width: 300px;
 	background: #47B5E6;
 	height: 645px;
+}
+
+.course_detail_left .btn_wrap {
 	position: absolute;
+	bottom: 0px;
 	right: 0px;
-	top: 0px;
+	padding: 20px 0px;
+	text-align: center;
+	width: 100%;
+}
+
+.course_detail_left .btn_wrap .course_btn {
+	display: inline-block;
+	padding: 0px 36px;
+	background: #ffb136;
+	cursor: pointer;
+	color: #fff;
+	font-size: 16px;
+	height: 36px;
+	line-height: 36px;
+	border-radius: 5px;
+}
+
+.course_detail_left .btn_wrap .course_btn:hover {
+	background: #fea924;
 }
 
 
@@ -144,4 +170,19 @@ body {
 .lui_chapter_catalog dl dd.last_dd .lui_dot {
 	bottom: 0px;
 	top: auto;
+}
+
+
+/*说明文档 不要拷贝*/
+
+.desc_wrap {
+	padding: 10px;
+	margin-bottom: 50px;
+}
+.desc_wrap dt{
+	margin-bottom: 15px;
+}
+.desc_wrap dd {
+	padding-left: 10px;
+	line-height: 24px;
 }
