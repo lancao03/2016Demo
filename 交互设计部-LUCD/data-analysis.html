@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>数据分析</title>
+
+  <link href="css/lucd.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/dataPlat.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+      <script src="js/ie8-responsive-file-warning.js"></script>
+  <![endif]-->
+  <script src="js/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Bootstrap core JavaScript
+      ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/lucd.js"></script>
+  <script src="js/common.js"></script>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+</head>
+<body class="lucd-bg-gray">
+  <!--页面头部栏 Starts-->
+  <div class="lucd-header lucd-fixed-top">
+    <div class="lucd-navbar lucd-navbar-default">
+      <div class="lucd-container">
+        <!-- 左侧LOGO Starts -->
+        <div class="lucd-navbar-header">
+          <a class="lucd-navbar-brand" href="index.html">
+            <div class="brand-inner">
+              <span class="logo"><img src="images/Logo.png" /></span>
+              <span class="logo-vice"><img src="images/Logo-vice.png" /></span>
+            </div>
+          </a>
+        </div>
+        <!-- 左侧LOGO Ends -->
+        <!-- 右侧内容 Starts -->
+        <ul class="lucd-nav lucd-navbar-nav lucd-navbar-right">
+          <li><a href="index.html" title="首页">首页</a></li>
+          <li><a href="case.html" title="案例">案例</a></li>
+          <li class="active"><a href="data-analysis.html" title="数据分析" >数据分析</a></li>
+          <li><a href="share.html" title="分享">分享</a></li>
+          <li><a href="javascript:void(0);" title="产品攻略">产品攻略</a></li>
+          <!-- <li><a href="forum.html" title="论坛">论坛</a></li> -->
+          <li class="lucd-dropdown lucd-header-personInfo">
+            <a href="#" class="lucd-dropdown-toggle lucd-avatar lucd-avatar-round" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/avatar_02.png" /></a>
+            <div class="lucd-dropdown-menu">
+              <i class="lucd-caret-up"></i>
+              <i class="lucd-caret-up-cover"></i>
+              <div class="lucd-header-toptip-card">
+                <ul class="operationLink">
+                  <li class="borderR"><a href="javascript:void(0)" title="个人设置">个人设置</a></li>
+                  <li><a href="javascript:void(0)" title="个人空间">个人空间</a></li>
+                  <li class="borderR"><a href="javascript:void(0)" title="我的订阅">我的订阅</a></li>
+                  <li><a href="javascript:void(0)" title="退出系统">退出系统</a></li>
+                </ul>
+                <div class="position"><span>前端开发工程师</span></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- 右侧内容 Ends -->
+      </div>
+    </div>
+  </div>
+  <!--页面头部栏 Ends-->
+
+  <!--数据分析 Starts-->
+  <div class="lucd-container lucd-data-content">
+    <!-- 左侧内容 Starts-->
+    <div class="lucd-grid-solidL-col-2">
+      <div class="lucd-sidebar">
+        <dl>
+          <dt class="open"><a>用户群分析<i class="trig"></i></a></dt>
+          <dd><a href="#">用户性别统计</a></dd>
+          <dd><a href="#">用户年龄统计</a></dd>
+          <dd><a href="#">用户学历统计</a></dd>
+          <dd><a href="#">用户移动端系统分析</a></dd>
+          <dd><a href="#">显示器分辨率统计</a></dd>
+          <dd><a href="#">系统使用时间</a></dd>
+          <dd><a href="#">浏览器使用分析</a></dd>
+          <dd><a href="#">与客户关系分析</a></dd>
+          <dd><a href="#">客户公司规模</a></dd>
+          <dd><a href="#">客户性质分析</a></dd>
+          <dd><a href="#">客户行业分析</a></dd>
+          <dd><a href="#">客户地域分析</a></dd>
+          <dt><a>产品数据分析<i class="trig"></i></a></dt>
+          <dd style="display: none;"><a href="#">企业已配置门户排行</a></dd>
+          <dd style="display: none;"><a href="#">企业已配置模块排行</a></dd>
+          <dd style="display: none;"><a href="#">企业门户点击率排行</a></dd>
+          <dd style="display: none;"><a href="#">企业模块点击率排行</a></dd>
+          <dd style="display: none;"><a href="#">二级页面点击统计</a></dd>
+          <dd style="display: none;"><a href="#">三级页面点击统计</a></dd>
+          <dd style="display: none;"><a href="#">搜索关键字统计</a></dd>
+        </dl>
+      </div>
+    </div>
+    <!-- 左侧内容 Ends-->
+    <!-- 右侧内容 Starts-->
+    <div class="lucd-grid-solidR-col-2">
+      <div class="lucd-viewdata-heading">
+        <div class="lucd-row">
+          <div class="lucd-title left">产品数据分析</div>
+          <div class="lucd-btn-group-inline right lucd-viewdata-btnGroup-sort">
+            <div class="lucd-btn-group">
+              <button data-toggle="dropdown" class="lucd-btn lucd-btn-sm lucd-btn-simple lucd-dropdown-toggle" aria-expanded="false">2016年4月<span class="lucd-dropdown-icon">
+
+              <i class="lucd-icon lucd-icon-arrLineDn"></i></span></button>
+              <ul class="lucd-dropdown-menu lucd-dropdown-menu-right">
+                <li><a href="javascript:void(0);">2016年3月</a></li>
+                <li><a href="javascript:void(0);">2016年2月</a></li>
+                <li><a href="javascript:void(0);">2016年1月</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lucd-viewdata-content">
+        <div class="lucd-row">
+          <div class="lucd-viewdata-item viewdata-item01">
+            <div class="header">用户性别统计</div>
+            <div class="content"><img src="images/data_analysis/chart01.jpg"></div>
+          </div>
+          <div class="lucd-viewdata-item viewdata-item02">
+            <div class="header">用户年龄统计</div>
+            <div class="content"><img src="images/data_analysis/chart02.jpg"></div>
+          </div>
+        </div>
+
+        <div class="lucd-row">
+          <div class="lucd-viewdata-item viewdata-item03">
+            <div class="header">用户学历统计</div>
+            <div class="content"><img src="images/data_analysis/chart03.jpg"></div>
+          </div>
+          <div class="lucd-viewdata-item viewdata-item04">
+            <div class="header">移动端系统分析</div>
+            <div class="content"><img src="images/data_analysis/chart04.jpg"></div>
+          </div>
+        </div>
+
+        <div class="lucd-row">
+          <div class="lucd-viewdata-item viewdata-item05">
+            <div class="header">显示器分辨率分析</div>
+            <div class="content"><img src="images/data_analysis/chart05.jpg"></div>
+          </div>
+          <div class="lucd-viewdata-item viewdata-item06">
+            <div class="header">系统使用时间</div>
+            <div class="content"><img src="images/data_analysis/chart06.jpg"></div>
+          </div>
+        </div>
+
+        <div class="lucd-row lucd-col-one">
+          <div class="lucd-viewdata-item viewdata-item07">
+            <div class="header">用户浏览器使用分析</div>
+            <div class="content"><img src="images/data_analysis/chart07.jpg"></div>
+          </div>
+        </div>
+        <div class="lucd-row">
+          <div class="lucd-viewdata-item viewdata-item08">
+            <div class="header">与客户关系走势</div>
+            <div class="content"><img src="images/data_analysis/chart08.jpg"></div>
+          </div>
+          <div class="lucd-viewdata-item viewdata-item09">
+            <div class="header">客户公司规模</div>
+            <div class="content"><img src="images/data_analysis/chart09.jpg"></div>
+          </div>
+        </div>
+        <div class="lucd-row lucd-col-one">
+          <div class="lucd-viewdata-item viewdata-item10">
+            <div class="header">客户性质分析</div>
+            <div class="content"><img src="images/data_analysis/chart10.jpg"></div>
+          </div>
+        </div>
+        <div class="lucd-row lucd-col-one">
+          <div class="lucd-viewdata-item viewdata-item11">
+            <div class="header">客户行业分析</div>
+            <div class="content"><img src="images/data_analysis/chart11.jpg"></div>
+          </div>
+        </div>
+        <div class="lucd-row lucd-col-one">
+          <div class="lucd-viewdata-item viewdata-item12">
+            <div class="header">客户地域分析</div>
+            <div class="content"><img src="images/data_analysis/chart12.jpg"></div>
+          </div>
+        </div>
+        <div class="lucd-row lucd-col-one">
+          <div class="lucd-viewdata-item viewdata-item13">
+            <div class="header">EKP使用版本情况</div>
+            <div class="content"><img src="images/data_analysis/chart13.jpg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="lucd-viewdata-heading">
+        <div class="lucd-row">
+          <div class="lucd-title left">用户群分析</div>
+          <div class="lucd-btn-group-inline right lucd-viewdata-btnGroup-sort">
+            <div class="lucd-btn-group">
+              <button data-toggle="dropdown" class="lucd-btn lucd-btn-sm lucd-btn-simple lucd-dropdown-toggle" aria-expanded="false">2016年4月<span class="lucd-dropdown-icon"><i class="lucd-icon lucd-icon-arrLineDn"></i></span></button>
+              <ul class="lucd-dropdown-menu lucd-dropdown-menu-right">
+                <li><a href="javascript:void(0);">2016年3月</a></li>
+                <li><a href="javascript:void(0);">2016年2月</a></li>
+                <li><a href="javascript:void(0);">2016年1月</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lucd-viewdata-content">
+        <div class="lucd-row">
+          <div class="lucd-viewdata-item viewdata-item14">
+            <div class="header">企业已配置门户排行</div>
+            <div class="content"><img src="images/data_analysis/chart14.jpg"></div>
+          </div>
+          <div class="lucd-viewdata-item viewdata-item15">
+            <div class="header">企业已配置模块排行</div>
+            <div class="content"><img src="images/data_analysis/chart15.jpg"></div>
+          </div>
+        </div>
+        <div class="lucd-row">
+          <div class="lucd-viewdata-item viewdata-item16">
+            <div class="header">企业门户点击率排行</div>
+            <div class="content"><img src="images/data_analysis/chart16.jpg"></div>
+          </div>
+          <div class="lucd-viewdata-item viewdata-item17">
+            <div class="header">企业模块点击率排行</div>
+            <div class="content"><img src="images/data_analysis/chart17.jpg"></div>
+          </div>
+        </div>
+        <div class="lucd-row lucd-col-one">
+          <div class="lucd-viewdata-item viewdata-item18">
+            <div class="header">二级页面点击统计</div>
+            <div class="content"><img src="images/data_analysis/chart18.jpg"></div>
+          </div>
+        </div>
+        <div class="lucd-row lucd-col-one">
+          <div class="lucd-viewdata-item viewdata-item19">
+            <div class="header">三级页面点击统计</div>
+            <div class="content"><img src="images/data_analysis/chart19.jpg"></div>
+          </div>
+        </div>
+        <div class="lucd-row lucd-col-one">
+          <div class="lucd-viewdata-item viewdata-item20">
+            <div class="header">搜索关键字统计</div>
+            <div class="content"><img src="images/data_analysis/chart20.jpg"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- 右侧内容 Ends-->
+  </div>
+  <!--数据分析 Ends-->
+
+  <!--页面注脚 Starts-->
+  <div class="lucd-footer">
+    <div class="lucd-footer-innerbox">
+      <div class="lucd-container">
+        <p>蓝凌软件 版权所有</p>
+        <p>
+          <span>粤ICP备11017824号-4 / 粤ICP证130164号</span>
+          <span class="lucd-ml-15">深圳市公安局南山分局备案编号:110105000501</span>
+        </p>
+        <p class="copyright">Copyright &copy; 2001-2015</p>
+      </div>
+      </div>
+  </div>
+  <!--页面注脚 Ends-->
+  <!--固定侧边工具栏 Starts-->
+  <div class="lucd-fixed-toolbar">
+    <a href="javascript:void(0);" class="lucd-btn" id="scrollToTop" title="置顶">
+      <div class="innerbar">
+        <i class="lucd-icon lucd-icon-lg lucd-icon-32-top"></i>
+        <span class="text-top">置顶</span>
+      </div>
+    </a>
+  </div>
+  <!--固定侧边工具栏 Ends-->
+  <!--意见反馈栏 Starts-->
+  <div class="lucd-feedback-box">
+    <div class="lucd-feedback-heading">
+      <button class="lucd-btn lucd-btn-default" type="button">
+        <i class="lucd-icon lucd-icon-words"></i>
+        帮助&意见反馈
+        <i class="lucd-icon lucd-icon-arrDotL"></i>
+      </button>
+    </div>
+    <div class="lucd-feedback-content">
+      <form class="lucd-form-comment lucd-form-horizontal">
+        <div class="lucd-form-group">
+          <textarea class="lucd-form-control" rows="10" placeholder="有任何意见或建议，请告诉我们！"></textarea>
+        </div>
+        <!--<div class="lucd-alert lucd-alert-warning">使用遇到问题？请先进入<a class="lucd-text-primary" href="#" title="帮助中心">帮助中心</a></div>-->
+        <div class="lucd-form-group lucd-form-comment-footer lucd-text-right">
+          <button class="lucd-btn lucd-btn-mute" type="button" id="feedback-close">关闭</button>
+          <button class="lucd-btn lucd-btn-primary" type="button">提交</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--意见反馈栏 Ends-->
+</body>
+</html>
