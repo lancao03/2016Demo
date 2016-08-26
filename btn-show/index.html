@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>按钮效果</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+	</head>
+
+	<body>
+		<div style="width:500px; padding:20px;">
+			<div class="opt_btn_wrap">
+				<div class="opt_more_btn"></div>
+				<div class="opt_btn_group">
+					<a href="">编辑</a>
+					<a href="">删除</a>
+					<a href="">禁用</a>
+					<a href="">日志</a>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				function btn_opt_show() {
+					var opt_btn_wrap = $('.opt_btn_wrap');
+					var opt_more_btn = $('.opt_more_btn');
+					var opt_btn_group = $('.opt_btn_group');
+					opt_btn_wrap.on('mouseover', function() {
+						opt_btn_group.stop().animate({
+							left: 0 + 'px',
+							opacity: 1
+						});
+						opt_more_btn.hide();
+					});
+					opt_btn_wrap.on('mouseout', function() {
+						opt_btn_group.stop().animate({
+							left: '100%',
+							opacity: 0
+						},function(){
+							opt_more_btn.show();
+						});
+						
+					});
+				}
+				btn_opt_show();
+			})
+		</script>
+	</body>
+
+</html>
