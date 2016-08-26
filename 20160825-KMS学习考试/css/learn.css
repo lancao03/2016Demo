@@ -1,0 +1,147 @@
+/*重置样式*/
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #333;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+dl,
+dd,
+dt {
+	margin: 0px;
+	padding: 0px;
+}
+
+a,
+a:hover,
+a:link {
+	text-decoration: none;
+}
+
+body {
+	padding: 30px;
+}
+
+
+/*测试用结束*/
+
+
+/*布局相关*/
+
+.course_detail_containter {
+	position: relative;
+	height: 665px;
+}
+
+.course_detail_containter .course_detail_left {
+	background: #BEC5CB;
+	height: 665px;
+	padding-right: 320px;
+}
+
+.course_detail_containter .course_detail_right {
+	padding: 10px;
+	width: 300px;
+	background: #47B5E6;
+	height: 645px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+
+/* 章节列表 */
+
+.lui_chapter_catalog {}
+
+.lui_chapter_catalog dl {
+	padding-left: 24px;
+	border-left: 3px solid #bec5cb;
+}
+
+.lui_chapter_catalog dl dt {
+	position: relative;
+	padding-bottom: 15px;
+}
+
+.lui_chapter_catalog dl dt .chapter_title {
+	font-size: 16px;
+	color: #656565;
+}
+
+.lui_chapter_catalog dl dt .lui_dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #fff;
+	border: 4px solid #bec5cb;
+	position: absolute;
+	left: -34px;
+	top: 0px;
+}
+
+.lui_chapter_catalog dl dd {
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+}
+
+.lui_chapter_catalog dl dd .lui_dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #bec5cb;
+	border-radius: 50%;
+	position: absolute;
+	left: -30px;
+	top: 17px;
+}
+
+.lui_chapter_catalog dl dd.active .lui_dot {
+	background: #fd4e1f;
+}
+
+.lui_chapter_catalog dl dd .course_title a {
+	font-size: 14px;
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+}
+
+.lui_chapter_catalog dl dd.status_disable .course_title a,
+.lui_chapter_catalog dl dd.status_disable .course_title:hover a {
+	color: #e1e1e1;
+	cursor: default;
+}
+
+.lui_chapter_catalog dl dd .course_title:hover a,
+.lui_chapter_catalog dl dd.active .course_title a {
+	color: #47b5e6;
+}
+
+.lui_chapter_catalog dl dt {
+	margin-top: 40px;
+}
+
+.lui_chapter_catalog dl dt:first-child {
+	margin-top: 0px;
+}
+
+.lui_chapter_catalog dl dd.last_dd {
+	padding-bottom: 0px;
+}
+
+.lui_chapter_catalog dl dd.last_dd .lui_dot {
+	bottom: 0px;
+	top: auto;
+}
