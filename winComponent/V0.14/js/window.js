@@ -1,0 +1,137 @@
+/**
+ * Created by lancao on 16/8/20.
+ */
+//PS:自定义事件 对原生的浏览器API做抽象 封装核心的框架core
+//对事件进行封装
+//增加拖动把手
+define(['jquery','jqueryUI'],function($,$UI){
+    //定义window模块 设计下接口 暴露window类
+    function Window(){
+        //字典格式 cfg
+        this.cfg={
+            width:500,
+            height:300,
+            content:'hello',
+            title:'这里是标题',
+            hasCloseBtn:false,
+            handler4AlertBtn:null,
+            handler4CloseBtn:null,
+            text4AlertBtn:"确定",
+            isDraggable:true,
+            hasMask:false,
+            skinClassName:null,
+            dragHandle:null
+        },
+            //空字典
+            this.handlers={};
+    }
+
+    Window.prototype={
+
+
+        alert:function(cfg){
+            //jquery的extend方法 比较合并
+            var CFG= $.extend(this.cfg,cfg),
+                boundbox=$(
+                    '<div class="window_boundingBox">' +
+                    '<div class="window_header">'+CFG.title+'</div>' +
+                    '<div class="window_content">'+CFG.content+'</div>' +
+                    '<div class="window_footer"><input type="button" value="'
+                    +CFG.text4AlertBtn+'"></div>' +
+                    '</div>'
+                ),
+                btn=boundbox.find('.window_footer input'),
+                mask=null,
+                that=this;
+
+            //是否为模态窗口 是否要为其增加这招
+            if(CFG.hasMask){
+                var mask=$('<div class="window_mask"></div>');
+                mask.appendTo('body');
+            }
+            boundbox.appendTo('body');
+
+            btn.click(function(){
+                boundbox.remove();
+            });
+
+
+            boundbox.css({
+                width:CFG.width+'px',
+                height:CFG.height+'px',
+                left:(CFG.x||(window.innerWidth-CFG.width)/2)+'px',
+                top:(CFG.y||(window.innerHeight-CFG.height)/2)+'px'
+            })
+
+            //是否有关闭按钮
+            if(CFG.hasCloseBtn){
+                var closeBtn=$('<span class="window_closeBtn">X</span>');
+                closeBtn.appendTo(boundbox);
+                closeBtn.click(function(){
+                   boundbox.remove();
+                    mask && mask.remove();
+                    that.fire('close');
+                });
+            }
+
+            //是否有自定义皮肤
+            if(CFG.skinClassName){
+                boundbox.addClass(CFG.skinClassName);
+            }
+
+            //是否可以拖动
+            if(CFG.isDraggable){
+                //判断是否有拖动把手
+                if(CFG.dragHandle){
+                    //CFG.Dragghandler.draggable();
+                    boundbox.draggable({handle:CFG.dragHandle});
+                }
+                else{
+                    boundbox.draggable();
+                }
+            }
+
+            if(CFG.handler4AlertBtn){
+                this.on('alert',CFG.handler4AlertBtn);
+            }
+
+            if(CFG.handler4CloseBtn){
+                this.on('close',CFG.handler4CloseBtn);
+            }
+
+        },
+        confirm:function(){
+
+        },
+        prompt:function(){
+
+        },
+        on:function(type,handler){
+            if(typeof this.handlers[type]=='undefined'){
+                this.handlers[type]=[];
+            }
+            this.handlers[type].push(handler);
+        },
+        fire:function(type,data){
+            if(this.handlers[type] instanceof Array){
+                var handlers=this.handlers[type];
+                for(var i= 0,len=handlers.length;i<len;i++){
+                    handlers[i](data);
+                }
+            }
+        },
+    }
+
+    return {
+        Window:Window
+    }
+
+
+
+})
+
+
+
+
+
+
