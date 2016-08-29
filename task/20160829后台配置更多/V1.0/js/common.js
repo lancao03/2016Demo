@@ -11,8 +11,8 @@ jQuery.fn.extend({
 			var _class = wrap.prop("className");
 			var isActive = false;
 
-			toggle();//切换显示与隐藏
-			
+			toggle(); //切换显示与隐藏
+
 			conf_drop_op.find("li").on("click", function(e) {
 				e.stopPropagation();
 				removeMenu();
@@ -40,15 +40,15 @@ jQuery.fn.extend({
 				if(isActive) {
 					removeMenu();
 				}
-				
+
 			});
 		});
 	}
-});
+});;
 
 $(document).ready(function() {
 	$(".conf_btn_more").on("click", function(e) {
-		e.stopPropagation();//阻止冒泡事件
+		e.stopPropagation(); //阻止冒泡事件
 		$(this).dropdown();
 	});
 });
