@@ -1,4 +1,4 @@
-(function() {
+;(function() {
 	var Dropdown = function(obj) {
 		//定义属性用this 查找元素 obj
 		var self = this;
@@ -11,19 +11,19 @@
 		this.conf_drop_op.width(w_wrap);
 
 		//this.toggle(); //切换显示与隐藏
-		this.obj.mouseover(function(e) {
+		this.obj.mouseenter(function(e) {
 			self.toggle();
 		});
 
-		this.obj.mouseout(function(e) {
+		this.obj.mouseleave(function(e) {
 			self.removeMenu();
 		});
 
-		this.conf_drop_op.mouseover(function(e) {
+		this.conf_drop_op.mouseenter(function(e) {
 			self.toggle();
 		});
 
-		this.conf_drop_op.mouseout(function(e) {
+		this.conf_drop_op.mouseleave(function(e) {
 			self.removeMenu();
 		});
 
