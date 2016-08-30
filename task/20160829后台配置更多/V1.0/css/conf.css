@@ -103,10 +103,11 @@ a {
 
 .conf_btn_edit .btn_txt {
 	margin: 0px 5px;
+	border-bottom:1px solid transparent;
 }
 .conf_btn_edit .btn_txt:hover{
-	text-decoration: underline;
-	color:#46b1fc;
+	border-bottom-color:#0033FF;
+	color:#0033FF;
 }
 
 .conf_show_more_w .conf_btn_more i {
@@ -127,7 +128,7 @@ a {
 }
 
 .conf_show_more_w.current .conf_btn_more,
-.conf_show_more_w:hover .conf_btn_more {
+.conf_show_more_w .conf_btn_more:hover {
 	border: 1px solid #dbdbdb;
 	background: #fff;
 }

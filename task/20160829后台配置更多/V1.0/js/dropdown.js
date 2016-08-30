@@ -8,8 +8,7 @@
 		this._class = this.wrap.prop("className");
 
 		//默认配置参数
-		
-		
+				
 		var w_wrap = this.wrap.width();
 		this.conf_drop_op.width(w_wrap);
 
