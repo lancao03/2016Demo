@@ -40,7 +40,10 @@
 		setOptions: function() {
 			if(this.btn_txt.size() > 2) {
 				
-				var more_btn=this.wrap.find(".conf_btn_more");
+				var more_btn=$('<a class="conf_btn_more" href="javascript:void(0)"><i class="caret"></i></a>'
+				var 
+				
+									
 				//this.toggle(); //切换显示与隐藏
 				obj.click(function(e) {
 					e.stopPropagation(); //阻止冒泡事件
