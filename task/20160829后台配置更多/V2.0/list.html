@@ -8,6 +8,7 @@
 	</head>
 
 	<body>
+		
 		<!-- 列表 开始 -->
 		<div class="lui_listview_body">
 			<div class="lui_listview_centerL">
@@ -39,16 +40,13 @@
 									<td style="" class="">2016-08-26</td>
 									<td style="" class="">
 										<!--操作按钮 开始-->
-										<div class="conf_show_more_w J_btn_wrap">
+										<div class="conf_show_more_w">
 											<div class="conf_btn_edit">
 												<a class="btn_txt" href="javascript:void(0);">编辑</a>
 												<a class="btn_txt" href="javascript:void(0);">删除</a>
-												<a class="btn_txt" href="javascript:void(0);">禁用</a>
-												<a class="btn_txt" href="javascript:void(0);">日志</a>
 
-												<!-- 更多按钮 -->
-												<a class="conf_btn_more" href="javascript:void(0)"><i class="caret"></i></a>
-												<div class=" conf_drop_op">
+												<a class="conf_btn_more J_btn_more" href="javascript:void(0)"><i class="caret"></i></a>
+												<div class="mod_drop_op conf_drop_op">
 													<ul class="bor2">
 														<li>
 															<a href="javascript:;" rel="conf-forbid" title="禁用" class="bg3_hover" blogid="1472089736">禁用</a>
@@ -75,16 +73,13 @@
 									<td style="" class="">2016-07-29</td>
 									<td style="" class="">
 										<!--操作按钮 开始-->
-										<div class="conf_show_more_w J_btn_wrap">
+										<div class="conf_show_more_w">
 											<div class="conf_btn_edit">
 												<a class="btn_txt" href="javascript:void(0);">编辑</a>
 												<a class="btn_txt" href="javascript:void(0);">删除</a>
-												<a class="btn_txt" href="javascript:void(0);">禁用</a>
-												<a class="btn_txt" href="javascript:void(0);">日志</a>
 
-												<!-- 更多按钮 -->
 												<a class="conf_btn_more J_btn_more" href="javascript:void(0)"><i class="caret"></i></a>
-												<div class=" conf_drop_op">
+												<div class="mod_drop_op conf_drop_op">
 													<ul class="bor2">
 														<li>
 															<a href="javascript:;" rel="conf-forbid" title="禁用" class="bg3_hover" blogid="1472089736">禁用</a>
@@ -117,7 +112,7 @@
 
 		<script>
 			$(function() {
-				Dropdown.init($(".J_btn_wrap"));
+				Dropdown.init($(".J_btn_more"));
 			});
 		</script>
 	</body>
