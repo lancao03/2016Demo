@@ -1,0 +1,21 @@
+{
+    "res": {
+        "css/edui-editor.css": {
+            "uri": "/css/edui-editor.css",
+            "type": "css"
+        },
+        "js/eui-editor.js": {
+            "uri": "/js/eui-editor.js",
+            "type": "js"
+        },
+        "js/lib/jquery.SuperSlide.2.1.1.js": {
+            "uri": "/js/lib/jquery.SuperSlide.2.1.1.js",
+            "type": "js"
+        },
+        "js/lib/jquery1.42.min.js": {
+            "uri": "/js/lib/jquery1.42.min.js",
+            "type": "js"
+        }
+    },
+    "pkg": {}
+}

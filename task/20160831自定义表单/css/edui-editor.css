@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+/**
+** 代码制作人: xiex
+** 制作时间：2016-08-31
+** 文件内容描述：自定义表单编辑器相关
+** 修改日期：无
+** 修改内容：无
+**********************************************/
+
+
+/*样式重置*/
+
+html,
+body,
+p {
+	padding: 0px;
+	margin: 0px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #666;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+ul,
+li {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.test-body {
+	background: #ebebed;
+}
+
+.edui-test-wrap {
+	width: 780px;
+	margin: 20px auto;
+}
+
+.edui-wrap {
+	border: 1px solid #eaeaea;
+	box-shadow: 0px 0px 5px rgba(234, 234, 234, 1);
+	background: #fff;
+}
+
+
+/*选项卡*/
+
+.edui-tab-head {
+	height: 26px;
+	background: #f1f2f4;
+}
+
+.edui-tab-head ul {
+	font-size: 0px;
+}
+
+.edui-tab-head ul li {
+	display: inline-block;
+	border: 1px solid #dbdbdb;
+	border-bottom: none;
+	margin-left: -1px;
+}
+
+.edui-tab-head ul li:first-child {
+	margin-left: 0px;
+}
+
+.edui-tab-head ul li.current,
+.edui-tab-head ul li:hover {
+	border-top-color: #9db5ec;
+	border-bottom-color: transparent;
+	background: #fff;
+}
+
+.edui-tab-head ul li a {
+	display: inline-block;
+	padding: 0px 25px;
+	line-height: 25px;
+	font-size: 12px;
+	color: #484848;
+	border-top: 1px solid transparent;
+}
+
+.edui-tab-head ul li.current a,
+.edui-tab-head ul li:hover a {
+	color: #6aa6fd;
+	border-top-color: #9db5ec;
+}
+
+
+/*布局相关 按钮组*/
+
+.edui-btns-group {}
+
+.edui-btns-group:after,
+.edui-btns-group .edui-btns-group-item:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+.edui-btns-group .edui-btns-group-item,
+.edui-btns-group .edui-btns-item {
+	float: left;
+}
+
+.edui-h4-title {
+	padding: 5px 0px;
+}
+
+.edui-btns-group .edui-btns-item {
+	padding:7px;
+}
+
+.edui-icon {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.edui-icon-s {
+	width: 16px;
+	height: 16px;
+}
+
+.edui-icon-m {
+	width: 24px;
+	height: 24px;
+}
+
+
+/*撤销*/
+
+.edui-icon-undo {
+	background-image: url(../images/edui-icon-undo.png);
+}
+
+
+/*重做*/
+
+.edui-icon-redo {
+	background-image: url(../images/edui-icon-redo.png);
+}
+
+
+/*全屏*/
+
+.edui-icon-fullscreen {
+	background-image: url(../images/edui-icon-fullscreen.png);
+}
+
+
+/*粘贴*/
+
+.edui-icon-paste {
+	background-image: url(../images/start/edui-icon-paste.png);
+}
+
+
+/*复制*/
+
+.edui-icon-copy {
+	background-image: url(../images/start/edui-icon-copy.png);
+}
