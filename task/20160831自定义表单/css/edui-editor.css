@@ -49,54 +49,66 @@ li {
 }
 
 
-/*选项卡*/
+/*选项卡头部*/
 
 .edui-tab-head {
-	height: 26px;
 	background: #f1f2f4;
+	border-bottom: 1px solid #dbdbdb;
+	border-top: 1px solid #dbdbdb;
+	height:28px;
 }
 
 .edui-tab-head ul {
 	font-size: 0px;
+	margin-left: -1px;
+	margin-top:-1px;
 }
 
 .edui-tab-head ul li {
 	display: inline-block;
-	border: 1px solid #dbdbdb;
-	border-bottom: none;
+	border:1px solid #dbdbdb;
+	border-bottom: 1px solid transparent;
+	height: 28px;
 	margin-left: -1px;
+	line-height: 24px;
 }
 
 .edui-tab-head ul li:first-child {
+	border-left-color:transparent;
 	margin-left: 0px;
 }
 
 .edui-tab-head ul li.current,
 .edui-tab-head ul li:hover {
 	border-top-color: #9db5ec;
-	border-bottom-color: transparent;
+	border-bottom-color:#fff;
 	background: #fff;
 }
 
 .edui-tab-head ul li a {
 	display: inline-block;
 	padding: 0px 25px;
-	line-height: 25px;
+	line-height: 24px;
 	font-size: 12px;
+	border-top:1px solid transparent;
 	color: #484848;
-	border-top: 1px solid transparent;
 }
 
 .edui-tab-head ul li.current a,
 .edui-tab-head ul li:hover a {
-	color: #6aa6fd;
 	border-top-color: #9db5ec;
+	color: #6aa6fd;
 }
-
 
 /*布局相关 按钮组*/
 
-.edui-btns-group {}
+.edui-btns-group {
+	padding-top:3px;
+	border-bottom: 1px solid #eee;
+	border-left:1px solid #dbdbdb;
+	border-right:1px solid #dbdbdb;
+	box-shadow: 0px 2px 2px rgba(238, 238, 238, 0.3);
+}
 
 .edui-btns-group:after,
 .edui-btns-group .edui-btns-group-item:after {
@@ -110,12 +122,106 @@ li {
 	float: left;
 }
 
+.edui-btns-group .edui-btns-group-item {
+	padding: 0px 10px;
+	position: relative;
+}
+
+.edui-btns-group .edui-btns-group-item .edui-h3-title {
+	padding: 10px 0px;
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+
 .edui-h4-title {
 	padding: 5px 0px;
 }
 
+.edui-h3-title {
+	text-align: center;
+	color: #555;
+}
+
 .edui-btns-group .edui-btns-item {
-	padding:7px;
+	padding: 7px;
+	text-align: center;
+}
+
+.edui-btns-splits {
+	float: right;
+	width: 1px;
+	height: 58px;
+	background: #e3e3e3;
+	margin-left: 20px;
+}
+
+
+/*下拉框*/
+
+.edui-dropdown-w {
+	height: 20px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	font-size: 0px;
+}
+
+.edui-dropdown-w:after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.edui-dropdown-input {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 12px;
+}
+
+.edui-dropdown-icon {
+	padding: 0px 5px;
+}
+
+
+/*字体*/
+
+.edui-btns-fontStyle-w {
+	font-size: 0px;
+	text-align: left;
+}
+
+.edui-fontfamily .edui-dropdown-input {
+	width: 128px;
+}
+
+.edui-fontSize {
+	margin-left: -1px;
+}
+
+.tab-content-start .edui-btns-group-item {
+	height: 90px;
+}
+/*表单元素*/
+.edui-btns-item{ width:60px; height: 64px; cursor: pointer; vertical-align: middle;}
+.edui-btns-item .edui-icon{ vertical-align: middle;margin-top:10px;}
+.edui-btns-item .edui-h4-title{ display: inline-block; vertical-align: middle; width: 100%; padding-top:10px; padding-bottom: 10px;}
+.edui-btns-item:hover{ background-color:#eff5fe;}
+.tab-content-from{ padding-top:15px; padding-bottom: 15px; text-align: justify;}
+
+/*文本区域*/
+.edui-iframeholder{width:100%; height:600px; background:#fff;}
+/************* 图标相关 *******************8*/
+
+.ediu-icon-caret {
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	border: 3px solid transparent;
+	border-top-color: #68728c;
 }
 
 .edui-icon {
@@ -124,7 +230,9 @@ li {
 	background-position: center;
 	cursor: pointer;
 }
-
+.edui-icon.edui-icon-s:hover{
+	background-color:#c8d9f0;
+}
 .edui-icon-s {
 	width: 16px;
 	height: 16px;
@@ -157,6 +265,9 @@ li {
 }
 
 
+/************* 开始 图标 ***************/
+
+
 /*粘贴*/
 
 .edui-icon-paste {
@@ -168,4 +279,317 @@ li {
 
 .edui-icon-copy {
 	background-image: url(../images/start/edui-icon-copy.png);
+}
+
+
+/*加粗*/
+
+.edui-icon-bold {
+	background-image: url(../images/start/edui-icon-bold.png);
+}
+
+
+/*斜体*/
+
+.edui-icon-italic {
+	background-image: url(../images/start/edui-icon-italic.png);
+}
+
+
+/*下划线*/
+
+.edui-icon-underline {
+	background-image: url(../images/start/edui-icon-underline.png);
+}
+
+
+/*字体样式*/
+
+.edui-icon-forecolor {
+	background-image: url(../images/start/edui-icon-forecolor.png);
+}
+
+
+/*居左*/
+
+.edui-icon-justifyleft {
+	background-image: url(../images/start/edui-icon-justifyleft.png);
+}
+
+
+/*居右*/
+
+.edui-icon-justifyright {
+	background-image: url(../images/start/edui-icon-justifyright.png);
+}
+
+
+/*居中*/
+
+.edui-icon-justifycenter {
+	background-image: url(../images/start/edui-icon-justiycenter.png);
+}
+
+
+/************* 表单集成 ***************/
+
+
+/*文本*/
+
+.edui-icon-text {
+	background-image: url(../images/form/edui-icon-text.png);
+}
+
+
+/*单行输入*/
+
+.edui-icon-input {
+	background-image: url(../images/form/edui-icon-input.png);
+}
+
+
+/*多行输入*/
+
+.edui-icon-textarea {
+	background-image: url(../images/form/edui-icon-textarea.png);
+}
+
+
+/*单选*/
+
+.edui-icon-radio {
+	background-image: url(../images/form/edui-icon-radio.png);
+}
+
+
+/*多选*/
+
+.edui-icon-checkbox {
+	background-image: url(../images/form/edui-icon-checkbox.png);
+}
+
+
+/*下拉菜单*/
+
+.edui-icon-select {
+	background-image: url(../images/form/edui-icon-select.png);
+}
+
+
+/*日历*/
+
+.edui-icon-calendar {
+	background-image: url(../images/form/edui-icon-calendar.png);
+}
+
+
+/*前端值计算*/
+
+.edui-icon-count {
+	background-image: url(../images/form/edui-icon-count.png);
+}
+
+
+/*富文本*/
+
+.edui-icon-rtf {
+	background-image: url(../images/form/edui-icon-rtf.png);
+}
+
+
+/*地址本*/
+
+.edui-icon-addressbook {
+	background-image: url(../images/form/edui-icon-addressbook.png);
+}
+
+
+/*超链接*/
+
+.edui-icon-alink {
+	background-image: url(../images/form/edui-icon-alink.png);
+}
+
+
+/*附件*/
+
+.edui-icon-attach {
+	background-image: url(../images/form/edui-icon-attach.png);
+}
+
+
+/*隐藏字段*/
+
+.edui-icon-hidden {
+	background-image: url(../images/form/edui-icon-hidden.png);
+}
+
+
+/*明细表*/
+
+.edui-icon-detail {
+	background-image: url(../images/form/edui-icon-detail.png);
+}
+
+
+/*权限字段*/
+
+.edui-icon-rightzone {
+	background-image: url(../images/form/edui-icon-rightzone.png);
+}
+
+
+/*显示权限*/
+
+.edui-icon-rightshow {
+	background-image: url(../images/form/edui-icon-rightshow.png);
+}
+
+
+/*大小写切换*/
+
+.edui-icon-caption {
+	background-image: url(../images/form/edui-icon-caption.png);
+}
+
+
+/***************** 布局相关图标 *******************/
+
+
+/*表格*/
+
+.edui-icon-table {
+	background-image: url(../images/layout/edui-icon-table.png);
+}
+
+
+/*DIV布局*/
+
+.edui-icon-div {
+	background-image: url(../images/layout/edui-icon-div.png);
+}
+
+
+/*多标签*/
+
+.edui-icon-label {
+	background-image: url(../images/layout/edui-icon-label.png);
+}
+
+
+/*属性列表*/
+
+.edui-icon-att-list {
+	background-image: url(../images/layout/edui-icon-att-list.png);
+}
+
+
+/*属性布局*/
+
+.edui-icon-att-layout {
+	background-image: url(../images/layout/edui-icon-att-layout.png);
+}
+
+
+/*换行控件*/
+
+.edui-icon-newline {
+	background-image: url(../images/layout/edui-icon-newline.png);
+}
+
+
+/*插入图片*/
+
+.edui-icon-img {
+	background-image: url(../images/layout/edui-icon-img.png);
+}
+
+
+/*缩小画布*/
+
+.edui-icon-zoom-out {
+	background-image: url(../images/layout/edui-icon-zoom-out.png);
+}
+
+
+/*放大画布*/
+
+.edui-icon-zoom-in {
+	background-image: url(../images/layout/edui-icon-zoom-in.png);
+}
+
+
+/***************** 集成&辅助 *******************/
+
+
+/*动态下拉框*/
+
+.edui-icon-dynamic-select {
+	background-image: url(../images/assit/edui-icon-dynamic-select.png);
+}
+
+
+/*事件控件*/
+
+.edui-icon-event {
+	background-image: url(../images/assit/edui-icon-event.png);
+}
+
+
+/*携程控件*/
+
+.edui-icon-ctrip {
+	background-image: url(../images/assit/edui-icon-ctrip.png);
+}
+
+
+/*微协同*/
+
+.edui-icon-tiny-oa {
+	background-image: url(../images/assit/edui-icon-tiny-oa.png);
+}
+
+
+/*JSP片段*/
+
+.edui-icon-jsp {
+	background-image: url(../images/assit/edui-icon-jsp.png);
+}
+
+
+/*审批控件*/
+
+.edui-icon-flow-app {
+	background-image: url(../images/assit/edui-icon-flow-app.png);
+}
+
+
+/*审批意见*/
+
+.edui-icon-flow-idea {
+	background-image: url(../images/assit/edui-icon-flow-idea.png);
+}
+
+
+/*EXCEL导入*/
+
+.edui-icon-excel {
+	background-image: url(../images/assit/edui-icon-excel.png);
+}
+
+
+/***************** 其他 *******************/
+
+
+/*源码查看*/
+
+.edui-icon-code {
+	background-image: url(../images/other/edui-icon-code.png);
+}
+
+
+/*控件树*/
+
+.edui-icon-tree {
+	background-image: url(../images/other/edui-icon-tree.png);
 }

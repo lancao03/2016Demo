@@ -3,16 +3,19 @@
 
 	<head>
 		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>自定义表单相关</title>
-		<link rel="stylesheet" href="/css/edui-editor.css" />
+		<link rel="stylesheet" href="css/edui-editor.css" />
 	</head>
 
-	<body>
+	<body class="test-body">
 		<!--自定义表单编辑框 Starts-->
-		<div class="edui-wrap">
+		<div class="edui-test-wrap edui-wrap eui-editor">
 			<!--操作条 Starts-->
 			<div class="edui-operation">
-				
+				<div class="edui-icon edui-disabled edui-icon-s edui-icon-undo" data-title="撤销"></div>
+				<div class="edui-icon edui-icon-s edui-icon-redo" data-title="重做"></div>
+				<div class="edui-icon edui-icon-s edui-icon-fullscreen" data-title="全屏"></div>
 			</div>
 			<!--操作条 Ends-->
 			<!--按钮 Starts-->
@@ -20,7 +23,7 @@
 				<!--选项卡 头部-->
 				<div class="edui-tab-head">
 					<ul>
-						<li>
+						<li class="current">
 							<a href="javascript:void(0);">开始</a>
 						</li>
 						<li>
@@ -40,36 +43,247 @@
 				<div class="edui-tab-content">
 					<!--开始-->
 					<div class="edui-tab-contentItem">
-						 开始
+						<div class="edui-btns-group">
+							<!--剪切板-->
+							<div class="edui-btns-group-item">
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-paste"></div>
+									<p class="edui-h4-title">粘贴</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-copy"></div>
+									<p class="edui-h4-title">复制</p>
+								</div>
+								<div class="edui-btns-splits"></div>
+								<p class="edui-h3-title">剪切板</p>
+							</div>
+							<!--字体-->
+							<div class="edui-btns-group-item">
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-paste"></div>
+									<p class="edui-h4-title">粘贴</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-copy"></div>
+									<p class="edui-h4-title">复制</p>
+								</div>
+								<div class="edui-btns-splits"></div>
+								<p class="edui-h3-title">字体</p>
+							</div>
+							<!--字体样式-->
+							<div class="edui-btns-group-item">
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-s edui-icon-bold" title="加粗"></div>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-s edui-icon-italic" title="斜体"></div>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-s edui-icon-underline" title="下划线"></div>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-s edui-icon-forecolor" title="字体颜色"></div>
+								</div>
+								<div class="edui-btns-splits"></div>
+								<p class="edui-h3-title">字样</p>
+							</div>
+							<!--段落-->
+							<div class="edui-btns-group-item">
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-s edui-icon-justifyleft" title="居左"></div>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-s edui-icon-justifycenter" title="居中"></div>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-s edui-icon-justifyright" title="居右"></div>
+								</div>
+								<p class="edui-h3-title">段落</p>
+							</div>
+						</div>
 					</div>
 					<!--表单元素-->
 					<div class="edui-tab-contentItem">
 						<!--表单集成-->
+						<div class="edui-btns-group">
+							<!--表单集成-->
+							<div class="edui-btns-group-item">
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-text"></div>
+									<p class="edui-h4-title">文本</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-input"></div>
+									<p class="edui-h4-title">单行输入</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-textarea"></div>
+									<p class="edui-h4-title">多行输入</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-radio"></div>
+									<p class="edui-h4-title">单选</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-checkbox"></div>
+									<p class="edui-h4-title">多选</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-select"></div>
+									<p class="edui-h4-title">下拉菜单</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-calendar"></div>
+									<p class="edui-h4-title">日历</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-count"></div>
+									<p class="edui-h4-title">前端值计算</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-addressbook"></div>
+									<p class="edui-h4-title">地址本</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-alink"></div>
+									<p class="edui-h4-title">超链接</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-attach"></div>
+									<p class="edui-h4-title">附件</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-hidden"></div>
+									<p class="edui-h4-title">隐藏字段</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-detail"></div>
+									<p class="edui-h4-title">明细表</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-rightzone"></div>
+									<p class="edui-h4-title">权限区段</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-rightshow"></div>
+									<p class="edui-h4-title">权限显示</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-caption"></div>
+									<p class="edui-h4-title">大小写切换</p>
+								</div>
+							</div>
+						</div>
 
 					</div>
 					<!--布局-->
 					<div class="edui-tab-contentItem">
-						<!--布局-->
+						<div class="edui-btns-group">
+							<!--布局-->
+							<div class="edui-btns-group-item">
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-table"></div>
+									<p class="edui-h4-title">表格</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-div"></div>
+									<p class="edui-h4-title">DIV布局</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-label"></div>
+									<p class="edui-h4-title">多标签</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-att-list"></div>
+									<p class="edui-h4-title">属性列表</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-att-layout"></div>
+									<p class="edui-h4-title">属性布局</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-newline"></div>
+									<p class="edui-h4-title">换行控件</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-img"></div>
+									<p class="edui-h4-title">插入图片</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-zoom-in"></div>
+									<p class="edui-h4-title">放大画布</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-zoom-out"></div>
+									<p class="edui-h4-title">缩小画布</p>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!--集成&辅助-->
 					<div class="edui-tab-contentItem">
 						<!--集成与辅助-->
+						<div class="edui-btns-group">
+							<!--布局-->
+							<div class="edui-btns-group-item">
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-dynamic-select"></div>
+									<p class="edui-h4-title">动态下拉框</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-event"></div>
+									<p class="edui-h4-title">事件控件</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-ctrip"></div>
+									<p class="edui-h4-title">携程控件</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-tiny-oa"></div>
+									<p class="edui-h4-title">微协同</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-jsp"></div>
+									<p class="edui-h4-title">JSP片段</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-flow-app"></div>
+									<p class="edui-h4-title">审批控件</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-flow-idea"></div>
+									<p class="edui-h4-title">审批意见</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-excel"></div>
+									<p class="edui-h4-title">EXCEL导入</p>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!--其他-->
 					<div class="edui-tab-contentItem">
 						<!--其他-->
-
+						<div class="edui-btns-group">
+							<!--其他-->
+							<div class="edui-btns-group-item">
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-code"></div>
+									<p class="edui-h4-title">查看源码</p>
+								</div>
+								<div class="edui-btns-item">
+									<div class="edui-icon edui-icon-m edui-icon-tree"></div>
+									<p class="edui-h4-title">控件树</p>
+								</div>
+							</div>
+						</div>
 					</div>
+					<!--按钮开始-->
 				</div>
-				<!--按钮开始-->
+				<!--按钮 Ends-->
 			</div>
-			<!--按钮 Ends-->
-		</div>
-		<!--自定义表单 编辑框 Ends-->
-		<!--脚本开始-->
-		<script src="/js/lib/jquery1.42.min.js"></script>
-		<script src="/js/lib/jquery.SuperSlide.2.1.1.js"></script>
-		<script src="/js/eui-editor.js"></script>
+			<!--自定义表单 编辑框 Ends-->
+			<!--脚本开始-->
 	</body>
 
 </html>
