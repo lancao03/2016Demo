@@ -126,7 +126,14 @@
 			} else {
 				return {}
 			}
+		},
+		
+		//设置对齐方式
+		setAlign:function(height){
+			var alignType=this.setting.verticalAlign,top:0;
+			if()
 		}
+		
 
 	};
 
