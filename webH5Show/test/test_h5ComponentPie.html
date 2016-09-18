@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>编写饼图</title>
+		<link rel="shortcut icon" href="../../index_Relate/ico/favicon.ico" />
+		<link rel="bookmark icon" href="../../index_Relate/ico/favicon.ico" />
+		<script src="../js/lib/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../js/H5ComponentBase.js">
+		</script>
+		<link rel="stylesheet" href="../css/H5ComponentBase.css" />
+
+		<!-- 引入折线图资源 -->
+		<script type="text/javascript" src="../js/H5ComponentPie.js"></script>
+		<link rel="stylesheet" href="../css/H5ComponentPie.css" />
+		<style>
+			body {
+				margin: 0px;
+				padding: 0px;
+				background: #000;
+				font-size: 12px;
+			}
+			
+			.iphone {
+				width: 340px;
+				height: 540px;
+				background: #fff;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -170px;
+				margin-top: -270px;
+			}
+		</style>
+		<!--<script type="text/javascript">
+			(function() {
+				var w = document.documentElement.clientWidth,
+					bd = document.getElementsByTagName('body')[0],
+					isIe = navigator.appName.toLowerCase() === 'microsoft internet explorer',
+					browsVersion = isIe ? navigator.appVersion.split(';')[1].replace(/\s/g, '') : '',
+					attrName = (isIe && (browsVersion === 'MSIE7.0' || browsVersion === 'MSIE6.0')) ? 'className' : "class",
+					dfCss = bd.getAttribute(attrName) || '',
+					c = '',
+					pageClass = {
+						"1380": "max-wide",
+						"1180": '',
+						"980": "min-wide"
+					};
+				if(w >= 1380) {
+					c = pageClass['1380'];
+				} else if(w >= 1180) {
+					c = pageClass['1180'];
+				} else {
+					c = pageClass['980'];
+				}
+				bd.setAttribute(attrName, dfCss + ' ' + c);
+			})();
+		</script>-->
+	</head>
+
+	<body>
+		<!--用于开发测试 验证H5ComponentPie 饼图组件-->
+		<div class="iphone"></div>
+		<script>
+			//配置对象
+			var cfg = {
+				type: "pie",
+				width: 400,
+				height: 400,
+				data: [
+					["Javascipt",
+						.4,
+						"#ff7676"
+					],
+					["HTML",
+						.2,
+
+					],
+					["CSS3",
+						.1,
+
+					],
+					["HTML5",
+						.3,
+
+					]
+				],
+				css: {
+//					bottom: 80,
+//					opacity: 0
+				},
+
+				animateIn: {
+					opacity: 1,
+					top: 200
+				},
+				animateOut: {
+					opacity: 0,
+					top: 100
+				},
+				center: true
+			}
+			var h5 = new H5ComponentPie("myBarComponent", cfg);
+			$(".iphone").append(h5);
+
+			var leave = true;
+			$("body").click(function() {
+				leave = !leave;
+				$(".h5_component").trigger(leave ? "onLeave" : "onLoad");
+			})
+		</script>
+	</body>
+
+</html>
