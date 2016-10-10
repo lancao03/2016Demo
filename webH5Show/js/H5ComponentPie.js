@@ -9,11 +9,6 @@ var H5ComponentPie = function(name, cfg) {
 	var h = cfg.height;
 	//	加入一块画布（做网格）
 	var cns = document.createElement("canvas");
-	var ctx = cns.getContext("2d"); //画布对象
-	cns.width = ctx.width = w;
-	cns.height = ctx.height = h;
-
-	var cns = document.createElement("canvas");
 	var ctx = cns.getContext("2d");
 	cns.width = ctx.width = w;
 	cns.height = ctx.height = h;
@@ -32,7 +27,6 @@ var H5ComponentPie = function(name, cfg) {
 	var ctx = cns.getContext("2d");
 	cns.width = ctx.width = w;
 	cns.height = ctx.height = h;
-	component.append(cns);
 	component.append(cns);
 
 	//预备一些颜色

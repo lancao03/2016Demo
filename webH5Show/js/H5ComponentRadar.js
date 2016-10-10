@@ -60,8 +60,8 @@ var H5ComponentRadar = function(name, cfg) {
 		//输出项目文字
 		var text = $("<div class='text'>");
 		text.text(cfg.data[i][0]);
-		//		text.css("left",x/2).css("top",y/2);
-		//		text.css("top", y / 2);
+		//text.css("left",x/2).css("top",y/2);
+		//text.css("top", y / 2);
 		text.css("transition", "all .5s " + (i * .1) + "s").css("opacity",0);
 		if(x > w / 2) {
 			text.css("left", x / 2 + 5);
